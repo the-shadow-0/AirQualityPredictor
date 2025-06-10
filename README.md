@@ -11,77 +11,77 @@ Screenshot of the Air Quality Prediction Interface
 
 ## ✨ Features
 
-    Real-time AQI Predictions: Machine learning model predicts air quality based on environmental parameters
+   Real-time AQI Predictions: Machine learning model predicts air quality based on environmental parameters
 
-    Modern UI/UX: Glassmorphism design with intuitive controls and visual feedback
+   Modern UI/UX: Glassmorphism design with intuitive controls and visual feedback
 
-    Comprehensive Analysis:
+   Comprehensive Analysis:
 
-        Color-coded AQI categories (Good to Hazardous)
+Color-coded AQI categories (Good to Hazardous)
 
-        Interactive gauge visualization
+Interactive gauge visualization
 
-        Health recommendations
+Health recommendations
 
-    Sample Values: Pre-filled examples for quick testing
+Sample Values: Pre-filled examples for quick testing
 
-    Responsive Design: Works seamlessly on desktop and mobile devices
+Responsive Design: Works seamlessly on desktop and mobile devices
 
-    Technical Highlights:
+Technical Highlights:
 
-        Gradient Boosting Regressor model (R²: 0.92+)
+   Gradient Boosting Regressor model (R²: 0.92+)
 
-        Robust feature scaling
+   Robust feature scaling
 
-        Input validation
+   Input validation
 
-        Error handling
+   Error handling
 
-##📦 Installation
+## 📦 Installation
 
- #Clone the repository:
+ # Clone the repository:
 
     bash
     
     git clone https://github.com/the-shadow-0/AirQualityPredictor.git
     cd AirQualityPredictor
 
- #Install dependencies:
+ # Install dependencies:
 
     bash
     
     pip install -r requirements.txt
 
-#Download dataset:
+# Download dataset:
 
   Get the Air Quality Dataset from UCI Repository
 
   Place AirQualityUCI.csv in the project root directory
 
-##🚀 Usage
+## 🚀 Usage
 
-  #Preprocess data and train model:
+  # Preprocess data and train model:
 
     bash
     
     python train_model.py
 
-  #Run the web application:
+  # Run the web application:
 
     bash
     
     uvicorn app:app --reload
 
-   #Access the web interface:
+   # Access the web interface:
     Open your browser and visit: http://localhost:8000
 
-##🧪 Testing the Model
+## 🧪 Testing the Model
 
-#Run sample predictions:
+# Run sample predictions:
 
     python test_model.py
 
-#Expected output:
+# Expected output:
 text
 
 Excellent conditions: Predicted AQI = 32.1
@@ -90,8 +90,7 @@ Moderate conditions: Predicted AQI = 78.8
 Unhealthy conditions: Predicted AQI = 135.2
 Hazardous conditions: Predicted AQI = 285.0
 
-##🧩 Project Structure
-text
+## 🧩 Project Structure
 
 air-quality-predictor/
 ├── static/               # Static assets
@@ -108,11 +107,11 @@ air-quality-predictor/
 ├── feature_scaler.pkl    # Feature scaler
 └── target_scaler.pkl     # Target scaler
 
-##🧠 Machine Learning Details
+## 🧠 Machine Learning Details
 
-#Model: Gradient Boosting Regressor
+# Model: Gradient Boosting Regressor
 
-   #Features:
+   # Features:
 
 Temperature (°C)
 
@@ -128,17 +127,17 @@ Hour of day
 
 Day of week
 
-#Target: PT08.S5(O3) sensor readings (proxy for AQI)
+# Target: PT08.S5(O3) sensor readings (proxy for AQI)
 
-   #Performance:
+   # Performance:
 
    Training R²: 0.95
 
    Testing R²: 0.92
 
-##🌍 Environmental Impact
+## 🌍 Environmental Impact
 
-#This application helps:
+# This application helps:
 
    Identify air quality hazards
 
@@ -148,9 +147,9 @@ Day of week
 
    Support urban planning decisions
 
-##🤝 Contributing
+## 🤝 Contributing
 
-#We welcome contributions! Please follow these steps:
+# We welcome contributions! Please follow these steps:
 
    Fork the repository
 
@@ -162,6 +161,6 @@ Day of week
 
    Open a pull request
 
-##📄 License
+## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
