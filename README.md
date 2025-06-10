@@ -41,15 +41,12 @@ Technical Highlights:
 
  ## Clone the repository:
 
-    bash
-    
+   
     git clone https://github.com/the-shadow-0/AirQualityPredictor.git
     cd AirQualityPredictor
 
  ## Install dependencies:
-
-    bash
-    
+   
     pip install -r requirements.txt
 
 ## Download dataset:
@@ -61,18 +58,15 @@ Technical Highlights:
 ## 🚀 Usage
 
   ## Preprocess data and train model:
-
-    bash
     
     python train_model.py
 
   ## Run the web application:
-
-    bash
     
     uvicorn app:app --reload
 
   ## Access the web interface:
+  
     Open your browser and visit: http://localhost:8000
 
 ## 🧪 Testing the Model
@@ -91,6 +85,7 @@ Unhealthy conditions: Predicted AQI = 135.2
 Hazardous conditions: Predicted AQI = 285.0
 
 ## 🧩 Project Structure
+text
 
 air-quality-predictor/
 ├── static/               # Static assets
