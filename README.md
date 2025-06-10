@@ -1,4 +1,4 @@
-### 🌤️ Air Quality Prediction Web App
+# 🌤️ Air Quality Prediction Web App
 
 ![AI1](https://github.com/user-attachments/assets/a8821270-45a6-4efd-b0b2-091729fb9409)
 
@@ -39,20 +39,20 @@ Technical Highlights:
 
 ## 📦 Installation
 
- # Clone the repository:
+ ## Clone the repository:
 
     bash
     
     git clone https://github.com/the-shadow-0/AirQualityPredictor.git
     cd AirQualityPredictor
 
- # Install dependencies:
+ ## Install dependencies:
 
     bash
     
     pip install -r requirements.txt
 
-# Download dataset:
+## Download dataset:
 
   Get the Air Quality Dataset from UCI Repository
 
@@ -60,28 +60,28 @@ Technical Highlights:
 
 ## 🚀 Usage
 
-  # Preprocess data and train model:
+  ## Preprocess data and train model:
 
     bash
     
     python train_model.py
 
-  # Run the web application:
+  ## Run the web application:
 
     bash
     
     uvicorn app:app --reload
 
-   # Access the web interface:
+  ## Access the web interface:
     Open your browser and visit: http://localhost:8000
 
 ## 🧪 Testing the Model
 
-# Run sample predictions:
+## Run sample predictions:
 
     python test_model.py
 
-# Expected output:
+## Expected output:
 text
 
 Excellent conditions: Predicted AQI = 32.1
@@ -109,9 +109,9 @@ air-quality-predictor/
 
 ## 🧠 Machine Learning Details
 
-# Model: Gradient Boosting Regressor
+## Model: Gradient Boosting Regressor
 
-   # Features:
+   ## Features:
 
 Temperature (°C)
 
@@ -127,9 +127,9 @@ Hour of day
 
 Day of week
 
-# Target: PT08.S5(O3) sensor readings (proxy for AQI)
+## Target: PT08.S5(O3) sensor readings (proxy for AQI)
 
-   # Performance:
+   ## Performance:
 
    Training R²: 0.95
 
@@ -137,7 +137,7 @@ Day of week
 
 ## 🌍 Environmental Impact
 
-# This application helps:
+## This application helps:
 
    Identify air quality hazards
 
@@ -149,7 +149,7 @@ Day of week
 
 ## 🤝 Contributing
 
-# We welcome contributions! Please follow these steps:
+## We welcome contributions! Please follow these steps:
 
    Fork the repository
 
