@@ -126,7 +126,7 @@ Hour of day
 
 Day of week
 
-## Target: PT08.S5(O3) sensor readings (proxy for AQI)
+Target: PT08.S5(O3) sensor readings (proxy for AQI)
 
    ## Performance:
 
@@ -136,7 +136,7 @@ Day of week
 
 ## 🌍 Environmental Impact
 
-## This application helps:
+ This application helps:
 
    Identify air quality hazards
 
@@ -148,7 +148,7 @@ Day of week
 
 ## 🤝 Contributing
 
-## We welcome contributions! Please follow these steps:
+ We welcome contributions! Please follow these steps:
 
    Fork the repository
 
