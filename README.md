@@ -87,24 +87,6 @@ Moderate conditions: Predicted AQI = 78.8
 Unhealthy conditions: Predicted AQI = 135.2
 Hazardous conditions: Predicted AQI = 285.0
 
-## 🧩 Project Structure
-   
-   AirQualityPredictor/<br>
-   ├── static/               # Static assets<br>
-   │   ├── style.css         # Main stylesheet<br>
-   ├── templates/            # HTML templates<br>
-   │   └── index.html        # Main interface<br>
-   ├── app.py                # FastAPI application<br>
-   ├── train_model.py        # Model training script<br>
-   ├── test_model.py         # Model testing script<br>
-   ├── preprocess.py         # Data preprocessing<br>
-   ├── requirements.txt      # Dependencies<br>
-   ├── README.md             # This documentation<br>
-   ├── aqi_model.pkl         # Trained model<br>
-   ├── feature_scaler.pkl    # Feature scaler<br>
-   └── target_scaler.pkl     # Target scaler<br>
-
-
 ## 🧠 Machine Learning Details
 
 ## Model: Gradient Boosting Regressor
