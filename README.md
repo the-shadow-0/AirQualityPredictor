@@ -5,8 +5,11 @@
 An end-to-end machine learning application that predicts Air Quality Index (AQI) based on environmental sensor data. This project combines a trained Gradient Boosting model with a modern web interface built with FastAPI and Jinja2 templates.
 
 Screenshot of the Air Quality Prediction Interface
+
 ![AI2](https://github.com/user-attachments/assets/556d94e1-89c9-4215-84d8-3849cf436e4e)
+
 ![AI3](https://github.com/user-attachments/assets/41d9aa73-1968-4569-bed0-5f098534f3d7)
+
 ![AI1](https://github.com/user-attachments/assets/a8821270-45a6-4efd-b0b2-091729fb9409)
 
 ## ✨ Features
