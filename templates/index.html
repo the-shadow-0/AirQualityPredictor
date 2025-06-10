@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Real-time Air Quality Index predictions using environmental sensors.">
+    <meta name="keywords" content="Air Quality, AQI, Environmental Sensors, Pollution Prediction, Flask App">
+    <meta name="author" content="Noureddine BENMANSER">
+    <title>AirQuality AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="glass-card">
+            <div class="header">
+                <h1>🌤️ AirQuality Predictor</h1>
+                <p class="subtitle">Real-time Air Quality Index predictions using environmental sensors</p>
+            </div>
+
+            {% if errors %}
+            <div class="error-card">
+                <h3>Input Errors:</h3>
+                <ul>
+                    {% for error in errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+
+            {% if error %}
+            <div class="error-card">
+                <h3>Prediction Error:</h3>
+                <p>{{ error }}</p>
+            </div>
+            {% endif %}
+
+            <form action="/predict" method="post" autocomplete="off">
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="temperature">Temperature (°C)</label>
+                        <input type="number" step="0.1" name="temperature" min="-10" max="50" placeholder="e.g., 25"
+                            value="{{ request.form.temperature if request.method == 'POST' else '' }}" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="humidity">Humidity (%)</label>
+                        <input type="number" step="0.1" name="humidity" min="0" max="100" placeholder="e.g., 60"
+                            value="{{ request.form.humidity if request.method == 'POST' else '' }}" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="co">CO (mg/m³)</label>
+                        <input type="number" step="0.01" name="co" min="0" max="10" placeholder="e.g., 0.5"
+                            value="{{ request.form.co if request.method == 'POST' else '' }}" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="benzene">Benzene (µg/m³)</label>
+                        <input type="number" step="0.1" name="benzene" min="0" max="20" placeholder="e.g., 1.5"
+                            value="{{ request.form.benzene if request.method == 'POST' else '' }}" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="nox">NOx (ppb)</label>
+                        <input type="number" step="1" name="nox" min="0" max="500" placeholder="e.g., 50"
+                            value="{{ request.form.nox if request.method == 'POST' else '' }}" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="hour">Hour of Day (0-23)</label>
+                        <input type="number" name="hour" min="0" max="23" placeholder="e.g., 14"
+                            value="{{ request.form.hour if request.method == 'POST' else '' }}" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="predict-btn">
+                    <span class="btn-text">Calculate AQI</span>
+                </button>
+            </form>
+
+            {% if prediction %}
+            <div class="result-card {{ color }}">
+                <div class="gauge">
+                    <div class="gauge-fill {{ color }}" style="width: {{ [prediction / 3, 100]|min }}%"></div>
+                </div>
+                <h2>AQI: {{ prediction }} - <span class="category-{{ color }}">{{ category }}</span></h2>
+                <p>
+                    {% if color == "excellent" %}
+                    Air quality is excellent - perfect for outdoor activities!
+                    {% elif color == "good" %}
+                    Air quality is good - no health impacts expected.
+                    {% elif color == "moderate" %}
+                    Acceptable air quality, but sensitive individuals should consider reducing prolonged outdoor
+                    exertion.
+                    {% elif color == "unhealthy-sensitive" %}
+                    Unhealthy for sensitive groups - children, elderly, and people with respiratory diseases should
+                    avoid prolonged outdoor exposure.
+                    {% elif color == "unhealthy" %}
+                    Unhealthy air quality - everyone may begin to experience health effects.
+                    {% else %}
+                    Hazardous conditions - health alert: everyone may experience serious health effects.
+                    {% endif %}
+                </p>
+
+                <div class="recommendation">
+                    <h3>Recommendations:</h3>
+                    <ul>
+                        {% if color in ["excellent", "good"] %}
+                        <li>✅ Ideal conditions for outdoor activities</li>
+                        <li>✅ Open windows for ventilation</li>
+                        <li>✅ Enjoy fresh air</li>
+                        {% elif color == "moderate" %}
+                        <li>⚠️ Sensitive groups should reduce outdoor activity</li>
+                        <li>⚠️ Close windows if you have respiratory issues</li>
+                        <li>✅ Others can continue normal activities</li>
+                        {% elif color == "unhealthy-sensitive" %}
+                        <li>⛔ Sensitive groups should avoid outdoor exertion</li>
+                        <li>⚠️ Others should limit prolonged outdoor exposure</li>
+                        <li>⚠️ Use air purifiers indoors</li>
+                        {% elif color == "unhealthy" %}
+                        <li>⛔ Everyone should reduce outdoor activities</li>
+                        <li>⛔ Keep windows closed</li>
+                        <li>⚠️ Use N95 masks if going outside</li>
+                        {% else %}
+                        <li>⛔🚨 Avoid all outdoor activities</li>
+                        <li>⛔🚨 Keep windows and doors closed</li>
+                        <li>⛔🚨 Use high-efficiency air purifiers</li>
+                        <li>⛔🚨 Consider evacuating if advised</li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+            {% endif %}
+
+            <div class="sample-values">
+                <h3>Sample Values:</h3>
+                <div class="sample-buttons">
+                    <button type="button" class="sample-btn" data-sample="good">Good Conditions</button>
+                    <button type="button" class="sample-btn" data-sample="moderate">Moderate Conditions</button>
+                    <button type="button" class="sample-btn" data-sample="unhealthy">Unhealthy Conditions</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.sample-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const sampleType = button.dataset.sample;
+                let values = {};
+
+                if (sampleType === 'good') {
+                    values = {
+                        temperature: 20,
+                        humidity: 50,
+                        co: 0.5,
+                        benzene: 1.0,
+                        nox: 30,
+                        hour: 10
+                    };
+                } else if (sampleType === 'moderate') {
+                    values = {
+                        temperature: 25,
+                        humidity: 65,
+                        co: 2.0,
+                        benzene: 5.0,
+                        nox: 80,
+                        hour: 16
+                    };
+                } else {
+                    values = {
+                        temperature: 32,
+                        humidity: 85,
+                        co: 7.5,
+                        benzene: 15.0,
+                        nox: 300,
+                        hour: 20
+                    };
+                }
+
+                Object.entries(values).forEach(([name, value]) => {
+                    const input = document.querySelector(`input[name="${name}"]`);
+                    if (input) input.value = value;
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
