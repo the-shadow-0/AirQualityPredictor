@@ -79,13 +79,12 @@ Technical Highlights:
     python test_model.py
 
 ## Expected output:
-text
 
-Excellent conditions: Predicted AQI = 32.1
-Good conditions: Predicted AQI = 45.5
-Moderate conditions: Predicted AQI = 78.8
-Unhealthy conditions: Predicted AQI = 135.2
-Hazardous conditions: Predicted AQI = 285.0
+Excellent conditions: Predicted AQI = 32.1<br>
+Good conditions: Predicted AQI = 45.5<br>
+Moderate conditions: Predicted AQI = 78.8<br>
+Unhealthy conditions: Predicted AQI = 135.2<br>
+Hazardous conditions: Predicted AQI = 285.0<br>
 
 ## 🧠 Machine Learning Details
 
