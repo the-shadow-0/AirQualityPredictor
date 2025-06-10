@@ -9,7 +9,7 @@ Screenshot of the Air Quality Prediction Interface
 ![AI3](https://github.com/user-attachments/assets/41d9aa73-1968-4569-bed0-5f098534f3d7)
 ![AI1](https://github.com/user-attachments/assets/a8821270-45a6-4efd-b0b2-091729fb9409)
 
-##✨ Features
+## ✨ Features
 
     Real-time AQI Predictions: Machine learning model predicts air quality based on environmental parameters
 
