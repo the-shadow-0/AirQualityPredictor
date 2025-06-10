@@ -105,6 +105,7 @@ air-quality-predictor/
 ├── feature_scaler.pkl    # Feature scaler
 └── target_scaler.pkl     # Target scaler
 
+
 ## 🧠 Machine Learning Details
 
 ## Model: Gradient Boosting Regressor
