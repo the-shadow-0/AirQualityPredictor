@@ -90,12 +90,12 @@ Hazardous conditions: Predicted AQI = 285.0
 ## 🧩 Project Structure
    text
    
-   air-quality-predictor/
-   ├── static/               # Static assets
-   │   ├── style.css         # Main stylesheet
-   ├── templates/            # HTML templates
-   │   └── index.html        # Main interface
-   ├── app.py                # FastAPI application
+   air-quality-predictor/<br>
+   ├── static/               # Static assets<br>
+   │   ├── style.css         # Main stylesheet<br>
+   ├── templates/            # HTML templates<br>
+   │   └── index.html        # Main interface<br>
+   ├── app.py                # FastAPI application<br>
    ├── train_model.py        # Model training script
    ├── test_model.py         # Model testing script
    ├── preprocess.py         # Data preprocessing
