@@ -1,4 +1,4 @@
-🌤️ Air Quality Prediction Web App
+###🌤️ Air Quality Prediction Web App
 
 ![AI1](https://github.com/user-attachments/assets/a8821270-45a6-4efd-b0b2-091729fb9409)
 
@@ -9,7 +9,7 @@ Screenshot of the Air Quality Prediction Interface
 ![AI3](https://github.com/user-attachments/assets/41d9aa73-1968-4569-bed0-5f098534f3d7)
 ![AI1](https://github.com/user-attachments/assets/a8821270-45a6-4efd-b0b2-091729fb9409)
 
-✨ Features
+##✨ Features
 
     Real-time AQI Predictions: Machine learning model predicts air quality based on environmental parameters
 
@@ -37,52 +37,51 @@ Screenshot of the Air Quality Prediction Interface
 
         Error handling
 
-📦 Installation
+##📦 Installation
 
-    Clone the repository:
+ #Clone the repository:
 
-bash
+    bash
+    
+    git clone https://github.com/the-shadow-0/AirQualityPredictor.git
+    cd AirQualityPredictor
 
-git clone https://github.com/the-shadow-0/AirQualityPredictor.git
-cd AirQualityPredictor
+ #Install dependencies:
 
-    Install dependencies:
+    bash
+    
+    pip install -r requirements.txt
 
-bash
+#Download dataset:
 
-pip install -r requirements.txt
+  Get the Air Quality Dataset from UCI Repository
 
-    Download dataset:
+  Place AirQualityUCI.csv in the project root directory
 
-    Get the Air Quality Dataset from UCI Repository
+##🚀 Usage
 
-    Place AirQualityUCI.csv in the project root directory
+  #Preprocess data and train model:
 
-🚀 Usage
+    bash
+    
+    python train_model.py
 
-    Preprocess data and train model:
+  #Run the web application:
 
-bash
+    bash
+    
+    uvicorn app:app --reload
 
-python train_model.py
-
-    Run the web application:
-
-bash
-
-uvicorn app:app --reload
-
-    Access the web interface:
+   #Access the web interface:
     Open your browser and visit: http://localhost:8000
 
-🧪 Testing the Model
+##🧪 Testing the Model
 
-Run sample predictions:
-bash
+#Run sample predictions:
 
-python test_model.py
+    python test_model.py
 
-Expected output:
+#Expected output:
 text
 
 Excellent conditions: Predicted AQI = 32.1
@@ -91,7 +90,7 @@ Moderate conditions: Predicted AQI = 78.8
 Unhealthy conditions: Predicted AQI = 135.2
 Hazardous conditions: Predicted AQI = 285.0
 
-🧩 Project Structure
+##🧩 Project Structure
 text
 
 air-quality-predictor/
@@ -109,60 +108,60 @@ air-quality-predictor/
 ├── feature_scaler.pkl    # Feature scaler
 └── target_scaler.pkl     # Target scaler
 
-🧠 Machine Learning Details
+##🧠 Machine Learning Details
 
-    Model: Gradient Boosting Regressor
+#Model: Gradient Boosting Regressor
 
-    Features:
+   #Features:
 
-        Temperature (°C)
+Temperature (°C)
 
-        Humidity (%)
+Humidity (%)
 
-        CO (mg/m³)
+CO (mg/m³)
 
-        Benzene (µg/m³)
+Benzene (µg/m³)
 
-        NOx (ppb)
+NOx (ppb)
 
-        Hour of day
+Hour of day
 
-        Day of week
+Day of week
 
-    Target: PT08.S5(O3) sensor readings (proxy for AQI)
+#Target: PT08.S5(O3) sensor readings (proxy for AQI)
 
-    Performance:
+   #Performance:
 
-        Training R²: 0.95
+   Training R²: 0.95
 
-        Testing R²: 0.92
+   Testing R²: 0.92
 
-🌍 Environmental Impact
+##🌍 Environmental Impact
 
-This application helps:
+#This application helps:
 
-    Identify air quality hazards
+   Identify air quality hazards
 
-    Provide health recommendations
+   Provide health recommendations
 
-    Raise awareness about environmental factors
+   Raise awareness about environmental factors
 
-    Support urban planning decisions
+   Support urban planning decisions
 
-🤝 Contributing
+##🤝 Contributing
 
-We welcome contributions! Please follow these steps:
+#We welcome contributions! Please follow these steps:
 
-    Fork the repository
+   Fork the repository
 
-    Create a new branch (git checkout -b feature/your-feature)
+   Create a new branch (git checkout -b feature/your-feature)
 
-    Commit your changes (git commit -am 'Add some feature')
+   Commit your changes (git commit -am 'Add some feature')
 
-    Push to the branch (git push origin feature/your-feature)
+   Push to the branch (git push origin feature/your-feature)
 
-    Open a pull request
+   Open a pull request
 
-📄 License
+##📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
