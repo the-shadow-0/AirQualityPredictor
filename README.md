@@ -87,12 +87,13 @@ Moderate conditions: Predicted AQI = 78.8
 Unhealthy conditions: Predicted AQI = 135.2
 Hazardous conditions: Predicted AQI = 285.0
 
-## 🧩 Project Structure
+🧩 Project Structure
 text
 
 air-quality-predictor/
 ├── static/               # Static assets
 │   ├── style.css         # Main stylesheet
+│   └── bg.jpg            # Background image
 ├── templates/            # HTML templates
 │   └── index.html        # Main interface
 ├── app.py                # FastAPI application
