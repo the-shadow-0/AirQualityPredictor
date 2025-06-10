@@ -1,4 +1,4 @@
-###🌤️ Air Quality Prediction Web App
+### 🌤️ Air Quality Prediction Web App
 
 ![AI1](https://github.com/user-attachments/assets/a8821270-45a6-4efd-b0b2-091729fb9409)
 
