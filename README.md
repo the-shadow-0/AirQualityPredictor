@@ -88,22 +88,21 @@ Unhealthy conditions: Predicted AQI = 135.2
 Hazardous conditions: Predicted AQI = 285.0
 
 ## 🧩 Project Structure
-   text
    
-   air-quality-predictor/<br>
+   AirQualityPredictor/<br>
    ├── static/               # Static assets<br>
    │   ├── style.css         # Main stylesheet<br>
    ├── templates/            # HTML templates<br>
    │   └── index.html        # Main interface<br>
    ├── app.py                # FastAPI application<br>
-   ├── train_model.py        # Model training script
-   ├── test_model.py         # Model testing script
-   ├── preprocess.py         # Data preprocessing
-   ├── requirements.txt      # Dependencies
-   ├── README.md             # This documentation
-   ├── aqi_model.pkl         # Trained model
-   ├── feature_scaler.pkl    # Feature scaler
-   └── target_scaler.pkl     # Target scaler
+   ├── train_model.py        # Model training script<br>
+   ├── test_model.py         # Model testing script<br>
+   ├── preprocess.py         # Data preprocessing<br>
+   ├── requirements.txt      # Dependencies<br>
+   ├── README.md             # This documentation<br>
+   ├── aqi_model.pkl         # Trained model<br>
+   ├── feature_scaler.pkl    # Feature scaler<br>
+   └── target_scaler.pkl     # Target scaler<br>
 
 
 ## 🧠 Machine Learning Details
